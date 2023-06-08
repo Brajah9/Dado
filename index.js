@@ -21,10 +21,6 @@ function random() {
 }
 
 boton.addEventListener('click', () => {
-    dado.classList.add('dadoAct')
-    setInterval(()=> {
-        dado.classList.remove('dadoAct')
-    },500)
     random()
 })
 

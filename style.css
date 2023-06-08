@@ -5,11 +5,14 @@
 }
 
 html, body {
-    background: var(--background-black)
+    background: var(--background-2);
+    margin: 0;
+    padding: 0;
 }
 
 .header, h2 {
-    font-size: 1.3em;
+    animation: animado 6s infinite;
+    font-size: 1.5em;
     color: var(--white);
     display: flex;
     justify-content: center;
@@ -18,17 +21,14 @@ html, body {
     font-family: monospace;
     font-style: italic;
     text-shadow: 2px 2px black;
-    background: black;
     border-radius: 20px;
-    padding: 0px;
-    background: rgb(20, 20, 20);
 }
 
 .container {
-    margin: 120px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     background: var(--background-2);
-    width: 40%;
-    border-radius: 20px;
     padding: 20px;
    
 }
@@ -60,6 +60,7 @@ html, body {
 }
 
 .boton {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,7 +70,6 @@ html, body {
     grid-row: 3/3;
     grid-column: 2/3;
     border-radius: 20px;
-    width: 80%;
     height: 40px;
     margin: 0px auto;
     padding: 17px;
@@ -79,7 +79,6 @@ html, body {
 }
 
 .boton:hover {
-    transform: scale(1.05);
     background: rgb(211, 129, 129);
     color: var(--white);
     text-shadow: 2px 2px black;
@@ -95,16 +94,34 @@ html, body {
 .numeros {
 
     color: var(--white);
-    padding: 10px;
+    padding: 20px;
     background: rgb(20, 20, 20);
     border-radius: 20px;
-    width: 70%;
     text-align: center;
     font-family: monospace;
     font-size: 1.4em;
 }
 
-.dadoAct {
-    transform: scale(1.1);
+@keyframes animado {
+    0% {
+        transform: rotate(5deg);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(5deg);
+    }
+
 }
 
