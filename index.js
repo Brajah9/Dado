@@ -21,10 +21,11 @@ function random() {
 }
 
 boton.addEventListener('click', () => {
-    random()
-})
-
-
-
-
-
+    random();
+    boton.style.display = 'none';
+    dado.classList.add('dadoActivo')
+    setTimeout(()=>{
+        dado.classList.remove('dadoActivo')
+        boton.style.display = 'flex';
+    },500);
+});
